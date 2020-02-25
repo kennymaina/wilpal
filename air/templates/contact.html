@@ -1,0 +1,67 @@
+
+  {% extends 'base.html' %}
+  <!-- {% block title %}Contact - {{ block.super }}{% endblock %} -->
+
+  {% block content %}
+  <head>
+        <div class="navbar">
+                <a href="{% url 'home' %}" >Home</a>
+                  </div>
+
+    <img src="https://mapio.net/images-p/59005552.jpg" alt="" width="1280px" height="656px" >
+<!-- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+</head>
+  
+  <body>
+
+      <br>
+      <br>
+      <br>
+  <form role="form" action="" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Submit</button>
+  </form>
+  <h1>Our Coordinates</h1>
+  <p>Certeon Security</p>
+  
+  <p>Raphta Road, Westlands</p>
+  <p>info@certeontechnologies.com</p>
+
+  <br>
+  <br>
+  <br>
+  <style>
+  form{
+      float: right;
+    
+  }
+  /* .footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: gray;
+   color: white;
+   text-align: center;
+} */
+
+
+
+/* 
+footer{
+  background-color: darkgray;
+} */
+
+  </style>
+
+
+<div class="footer">
+        <!-- <p>footer</p> -->
+        <p>@copyright2019</p>
+</div>
+            
+  </body>
+  {% endblock %}
