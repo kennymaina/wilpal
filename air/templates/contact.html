@@ -1,67 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
-  {% extends 'base.html' %}
-  <!-- {% block title %}Contact - {{ block.super }}{% endblock %} -->
+<center>
+        <h1 class = 'alert alert-success'> leave a message</h1>
+        <!-- <h3 class="p-3 mb-2 bg-primary text-white" style = 'font-size: 50px;'>wilpal -->
+</center>
+    {% include 'messages.html' %}
+<body>
+    <div class="container">
+        <div class="fom">
+    <form method="POST">
+        <!-- Very Important csrf Token -->
+        {% csrf_token %}
+        <div class = "form-group">
+            <p>
+            <h3>{{ form.as_p }}</h3>
+        </p>
+            <br>
+            <input type="submit" name="Subscribe" class = 'btn btn-primary btn-lg'>
+                </div>
+            </form>
+        </div>
+        </div>
+        <!-- </center> -->
+</body>
+<!-- Footer -->
+<div class="footer footer--dark">
+		<div class="container">
+			<div class="footer__inner">
+				<a href="index.html" class="footer__textLogo">WilPal Logistics</a>
+				<div class="footer__data">
+					<div class="footer__data__item">
+						<div class="footer__row">
+							Email &nbsp;&nbsp;&nbsp;<a href="mailto://kenmaina2022@gmail.com" target="_blank" class="footer__link">kenmaina2022@gmail.com</a>
+						</div>
+						<div class="footer__row">
+						Phone &nbsp;&nbsp;&nbsp; <a href="tel://0712345678" target="_blank" class="footer__link">0712345678</a>
+						</div>
+					</div>
+					<div class="footer__data__item">
+						<div class="footer__row">Wilpal Logistics is a company involved in <br> shipping all sorts of goods. Give us a try today!
+						</div>
+					</div>
+					<div class="footer__data__item">
+					<div class="footer__row">
+						<a href="https://github.com/anges244/evie" target="_blank" class="footer__link">GitHub</a>
+					</div>
+					<div class="footer__row">
+						<a href="https://twitter.com/undraw_co" target="_blank" class="footer__link">Twitter</a>
+					</div>
+					<div class="footer__row">
+						<a href="https://www.facebook.com/undraw.co/" target="_blank" class="footer__link">Facebook</a>
+					</div>
+					<div class="footer__row">
+						<a href="./additional.html" class="footer__link">MIT license</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-  {% block content %}
-  <head>
-        <div class="navbar">
-                <a href="{% url 'home' %}" >Home</a>
-                  </div>
+<style>
 
-    <img src="https://mapio.net/images-p/59005552.jpg" alt="" width="1280px" height="656px" >
-<!-- 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-</head>
-  
-  <body>
+.fom{
+    background-color: royalblue;
+}
+body{
+    background-color: royalblue;
+}
+h1{
+    color: white;
+}
 
-      <br>
-      <br>
-      <br>
-  <form role="form" action="" method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button type="submit">Submit</button>
-  </form>
-  <h1>Our Coordinates</h1>
-  <p>Certeon Security</p>
-  
-  <p>Raphta Road, Westlands</p>
-  <p>info@certeontechnologies.com</p>
-
-  <br>
-  <br>
-  <br>
-  <style>
-  form{
-      float: right;
-    
-  }
-  /* .footer {
-   position: relative;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: gray;
-   color: white;
-   text-align: center;
-} */
-
-
-
-/* 
-footer{
-  background-color: darkgray;
-} */
-
-  </style>
-
-
-<div class="footer">
-        <!-- <p>footer</p> -->
-        <p>@copyright2019</p>
-</div>
-            
-  </body>
-  {% endblock %}
+</style>
+        {% endblock %}
