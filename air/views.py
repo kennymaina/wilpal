@@ -22,7 +22,21 @@ def about(request):
 
 def services(request):
     return render(request, 'services.html')
+# ///////////////
 
+
+
+def air(request):
+    return render(request, 'air.html')
+
+
+
+
+
+
+
+
+# #################################
 
 def contact(request):
     form = ContactForm()
@@ -37,7 +51,7 @@ def contact(request):
                 'Sales Cargo',
                 form_content,
                 contact_email,
-                ['kenmaina2022@gmail.com', 'info@wilpalinternationalogistics.com','imports@wilpalinternationalogistics.com','exports@wilpalinternationalogistics.com',
+                ['info@wilpalinternationalogistics.com', 'kenmaina2022@gmail.com ','imports@wilpalinternationalogistics.com','exports@wilpalinternationalogistics.com',
                  'wilber@wilpalinternationalogistics.com','paul@wilpalinternationalogistics.com','accounts@wilpalinternationalogistics.com','sales@wilpalinternationalogistics.com'],
                 fail_silently=False,
             )
