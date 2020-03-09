@@ -2,95 +2,42 @@
 {% load static %}
 
 
-<head>
-	<meta class="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title></title>
-	<link rel='stylesheet' href='css/style.min.css' />
-</head>
 {% block content  %}
-    {% include 'messages.html' %}
-<body>
-		<div class="page__header">
-				<div class="hero__overlay hero__overlay--gradient"></div>
-				<div class="hero__mask"></div>
-				<div class="page__header__inner">
-					<div class="container">
-						<div class="page__header__content">
-							<div class="page__header__content__inner" id='navConverter'>
-								<h1 class="page__header__title">contact us we are online</h1>
-								<p class="page__header__text">
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-    <div class="container">
-        <div class="fom">
-    <form method="POST">
-        <!-- Very Important csrf Token -->
-        {% csrf_token %}
-        <div class = "form-group">
-            <p>
-            <h3>{{ form.as_p }}</h3>
-        </p>
-            <br>
-          <button><input type="submit" name="Subscribe" class = 'btn btn-primary btn-lg'></button>  
-                </div>
-            </form>
-        </div>
-        </div>
-        <!-- </center> -->
-</body>
-<!-- Footer -->
-<div class="footer footer--dark">
-		<div class="container">
-			<div class="footer__inner">
-				<a href="index.html" class="footer__textLogo">WilPal International Logistics</a>
-				<div class="footer__data">
-					<div class="footer__data__item">
-						<div class="footer__row">
-							Email &nbsp;&nbsp;&nbsp;<a href="mailto://info@wilpalinternationalogistics.com" target="_blank" class="footer__link">info@wilpalinternationalogistics.com</a>
-						</div>
-						<div class="footer__row">
-						Phone &nbsp;&nbsp;&nbsp; <a href="tel://+254 772 561415" target="_blank" class="footer__link">+254 772 561415</a>
-						</div>
-					</div>
-					<div class="footer__data__item">
-						<div class="footer__row">Wilpal Logistics is a company involved in <br> shipping all sorts of goods. Give us a try today!
-						</div>
-					</div>
-					<div class="footer__data__item">
-						<div class="footer__row">
-							<a href="#" target="_blank" class="footer__link">LinkedIn</a>
-						</div>
-						<div class="footer__row">
-							<a href="#" target="_blank" class="footer__link">Twitter</a>
-						</div>
-						<div class="footer__row">
-							<a href="#" target="_blank" class="footer__link">Facebook</a>
-						</div>
-						<div class="footer__row">
-							<a href="#" class="footer__link">Instagram</a>
-						</div>
-					</div>
-			</div>
-		</div>
+<div class="mt-5 mb-5"></div>
+
+<!-- Default form contact -->
+<br>
+{% include 'messages.html' %}
+
+<form class="text-center  p-3 mt-5 w-75 mx-auto" method="post">
+	{%csrf_token%}
+
+    <p class="h4 mb-4">Contact us</p>
+
+    <!-- Name -->
+	<div class="form-row">
+	<div class="input-group col-6">
+    <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name" name="contact_name">
+    </div>
+    <!-- Email -->
+	<div class="input-group col-6">
+    <input type="email" id="defaultContactFormEmail" class="form-control mb-4 " placeholder="E-mail" name="contact_email">
 	</div>
-</div>
-<style>
+	</div>
 
-/* .fom{
-    background-color: royalblue;
-} */
-body{
-    background-color: gray;
-	background-image: url('');
-}
-h1{
-    color: white;
-}
 
-</style>
-        {% endblock %}
+    <!-- Message -->
+    <div class="form-group">
+        <textarea class="form-control rounded" id="exampleFormControlTextarea2" rows="5" placeholder="Message" name="content"></textarea>
+    </div>
+
+
+
+    <!-- Send button -->
+    <button class="btn btn-info btn-block  ml-0 my-0" type="submit">Send</button>
+
+</form>
+<!-- Default form contact -->
+
+
+{% endblock %}

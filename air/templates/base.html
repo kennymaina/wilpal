@@ -1,37 +1,137 @@
 {%load staticfiles%}
-{%load bootstrap3%}
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta class="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta class="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>Wil Pal</title>
-	<!-- Don't forget to add your metadata here -->
-	<link rel='stylesheet' href="{%static 'css/style.min.css'%}" />
-	{%block styles%}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' href="{%static 'css/mdb.css'%}" />
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
-	{%endblock styles%}
+<style>
+body {font-family: "Lato", sans-serif}
+@media (min-width: 800px) and (max-width: 850px) {
+.navbar:not(.top-nav-collapse) {
+background: #1C2331!important;
+}
+}
+.carousel,.carousel .carousel-inner,.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item,.view,body,html{height:100%}.navbar{background-color:rgba(0,0,0,.2)}.page-footer,.top-nav-collapse{background-color:#1C2331}@media only screen and (max-width:768px){.navbar{background-color:#1C2331}}
+</style>
+
 </head>
 <body>
-	<!-- Hero(extended) navbar -->
-	<div class="navbar navbar--extended">
-		<nav class="nav__mobile"></nav>
-		<div class="container">
-			<div class="navbar__inner">
-				<a href="{%url 'home'%}" class="navbar__logo">WilPal</a>
-				<nav class="navbar__menu">
-					<ul>
-						<li><a href="{%url 'services'%}">Services</a></li>
-						<li><a href="{%url 'about'%}">About</a></li>
-						<li><a href="{%url 'contacts'%}">Contacts</a></li>
-						<li><a href="{%url 'air'%}">air</a></li>
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+      <!-- Brand -->
+      <div class="nav-item active">
+		  <a href="{%url 'home'%}" class="nav-link "><span class="h3 m-0"  style="text-decoration:none;color:white"> Wil Pal Logistics</span></a>
+          </div>
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-					</ul>
-				</nav>
-				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
-			</div>
-		</div>
-	</div>
-{%block content%}
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
 
-{%endblock%}
+        </ul>
+
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a href="{%url 'services'%}" class="nav-link" >
+              Services
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{%url 'about'%}" class="nav-link" >
+              About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{%url 'contacts'%}" class="nav-link" >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+  {%block content%}
+
+  {%endblock%}
+
+
+
+
+ <!--/.Footer-->
+    <script  src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{%static 'js/mdb.js'%}"></script>
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mt-4 wow fadeIn p-3">
+	  <p class="h4">WilPal International Logistics</p>
+	  <p class="mb-4 mt-4">Wilpal Logistics is a company involved in shipping all sorts of goods. Give us a try today!</p>
+    <!--Call to action-->
+
+    <!--/.Call to action-->
+
+	  <div class="mb-4">
+		  <a href="tel://+254 772 561415" target="_blank" class="mr-3">
+        <i class="fa fa-phone"></i> Call Us
+      </a><a href="mailto://info@wilpalinternationalogistics.com" target="_blank" class="mr-3">
+        <i class="fa fa-envelope"></i> Email Us
+      </a>
+	  </div>
+
+    <!-- Social icons -->
+    <div class="pb-4">
+      <a href="" target="_blank" class="mr-3">
+        <i class="fa fa-linkedin"></i> Linked In
+      </a>
+
+      <a href="" target="_blank" class="mr-3">
+        <i class="fa fa-twitter"></i> Twitter
+      </a>
+
+      <a href="" target="_blank" class="mr-3">
+        <i class="fa fa-instagram "></i> Instagram
+      </a>
+
+      <a href="" target="_blank">
+        <i class="fa fa-facebook "></i> Facebook
+      </a>
+
+
+
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+		© <span id="year"></span> Copyright:
+      <a href="" target="_blank"> WilPal Logistics </a>
+    </div>
+    <!--/.Copyright-->
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+</script>
+  </footer>
+
+{%block scripts%}
+
+{%endblock scripts%}
+</body>
+</html>
+
 

@@ -53,7 +53,7 @@ def contact(request):
                 contact_email,
                 ['info@wilpalinternationalogistics.com', 'kenmaina2022@gmail.com ','imports@wilpalinternationalogistics.com','exports@wilpalinternationalogistics.com',
                  'wilber@wilpalinternationalogistics.com','paul@wilpalinternationalogistics.com','accounts@wilpalinternationalogistics.com','sales@wilpalinternationalogistics.com'],
-                fail_silently=False,
+                fail_silently=True,
             )
             messages.success(request,'The email has been sent successfully.')
             return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

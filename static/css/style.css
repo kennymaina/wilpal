@@ -334,7 +334,7 @@ img, svg {
   margin: 0 auto;
   position: relative; }
 
-.row {
+.rowstyle {
   display: block;
   width: 100%;
   clear: both; }
@@ -730,11 +730,12 @@ select {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee; }
 
-.navbar {
+.navbarstyle {
   position: fixed;
   z-index: 100;
   width: 100%;
-  background-color: #6C63FF;
+  background-color: transparent;
+  text-decoration:none;
   transition: 0.7s; }
   .navbar--nofixed {
     position: relative;
@@ -795,10 +796,12 @@ select {
 
 /*--- Extended and transparent version ---*/
 .navbar--extended {
-  background-color: transparent; }
+   background-color: #6C63FF;
+   }
   .navbar--extended .navbar__inner {
     height: 60px;
-    color: #ffffff; }
+    color: #ffffff;
+    }
 
 /*! responsive-nav.js 1.0.39 by @viljamis */
 .nav__mobile ul {
